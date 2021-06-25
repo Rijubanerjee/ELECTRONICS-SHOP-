@@ -1,0 +1,79 @@
+<!-- <header class="p-1 bg-info">
+  <h1 class="text-center text-primary"> Payment </h1>
+</header>
+
+<article>
+  <nav class="col-6 bg-dark p-2 m-5 mx-auto ">
+    <a routerLink='makepayment' class="m-2 text-white ">Add Employee</a>
+    <a routerLink='viewpayment' class="m-2 text-white">View Payment</a>
+   
+
+  </nav>
+  <router-outlet></router-outlet>
+</article> -->
+<header class="col-8 mx-auto bg-light">
+  <h1 class="text-center">Electronics Shop</h1>
+</header>
+
+
+<section class="col-8 mx-auto">
+<ul class="nav nav-pills bg-primary text-white">
+  <li class="nav-item">
+    <a class="nav-link text text-white" >Home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item"  routerLink='addproducts'>Add Products</a>
+      <!-- <a class="dropdown-item"  routerLink='viewbycategoryname'>View By Category Name</a> -->
+      <a class="dropdown-item"  routerLink='viewbyproductId'>View By Product Id</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item"  routerLink='addcategory'>Add Category</a>
+      <a class="dropdown-item"  routerLink='viewall'>View all Categories</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Product Specifications</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink='addproductspecs'>Add Product Specifications</a>
+      <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">View Product Specifications</a>
+    <div class="dropdown-menu">
+      <!-- <a class="dropdown-item" routerLink='viewproductspecsbyproductid'>View Product Specifications by Product Id</a> -->
+      <a class="dropdown-item" routerLink='viewproductspecsbyspecid'>View Product Specifications by Spec Id</a>
+    </div>
+    </div>
+   
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BASKET</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item"  routerLink='getitemsbycustid'>Go To Basket</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">View Payment Details</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink='viewpayment'>View Your Payment</a>
+      <a class="dropdown-item" routerLink='viewpaymentbycustid' >View Payment by Customer ID</a>
+      <!-- <a class="dropdown-item" routerLink='makepayment' >Make Payment</a> -->
+    </div>
+   
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">ViewOrder</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink='/vieworders/bycustid'>View Order By CustId</a>
+    </div>
+
+  </li>
+
+
+</ul>
+</section>
+<article class="col-8 mx-auto">
+  <router-outlet></router-outlet>
+</article>

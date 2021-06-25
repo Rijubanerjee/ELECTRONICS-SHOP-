@@ -1,0 +1,24 @@
+<div>
+  <h4>View Product Specification by Spec Id</h4>
+</div>
+<div class="col-4 mx-auto p-2 m-2 input-group-prepend">
+  <input type="number" placeholder="Enter Specification Id" [(ngModel)]="specid" class="form-control" aria-label="" aria-describedby="basic-addon1">
+  <input type="button" value="Search" (click)="viewbyspecid()" class="btn btn-success col-4 form-control" style="float: right;">
+  </div>
+  <section>
+    <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
+    <table class="col-5 mx-auto table table-dark table-stripped" *ngIf="specs!=undefined">
+      <tr>
+        <td>Specification Name</td>
+        <td>{{specs.specName|titlecase}}</td>
+      </tr>
+      <tr>
+        <td>Specification Value</td>
+        <td>{{specs.specValue}}</td>
+      </tr>
+      <tr>
+        <td>Product Name</td>
+        <td>{{specs.elecProdDetails.name}}</td>
+      </tr>
+    </table>
+  </section>

@@ -1,0 +1,18 @@
+<section class="col-4 mx-auto card card-primary p-1" id="addid">
+  <div class="alert alert-success">{{msg}}</div>
+<form #frm="ngForm" (ngSubmit)="additemsinbasket()">
+    <div>Customer Id</div>
+    <div><input type="number" class="form-control" name="txtcust" [(ngModel)]="basket.custId" #cust="ngModel" required/></div>
+    <div *ngIf="cust.invalid && cust.touched" class="alert alert-danger">
+        <div *ngIf="cust.errors.required"> Customer Id is required</div>
+    </div>
+
+    <div>Product Id</div>
+    <div><input type="number" class="form-control" name="txtprod" [(ngModel)]="basket.prodId" #prod="ngModel" required readonly/></div>
+    <!-- <div *ngIf="prod.invalid && prod.touched" class="alert alert-danger">
+      <div *ngIf="prod.errors.required"> Product Id is required</div> -->
+    <!-- </div> -->
+
+    <input type="submit" value="additem" [disabled]="!frm.valid"/>
+</form>
+</section>

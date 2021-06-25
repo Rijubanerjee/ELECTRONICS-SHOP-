@@ -1,0 +1,26 @@
+<div class="col-md-8 mx-auto alert alert-success text-center" *ngIf="msg==undefined">
+  You  Canceled Your Order Details is
+ </div>
+ <div class="col-md-8 mx-auto alert alert-danger text-center" *ngIf="msg!=undefined" >
+  {{msg}}
+ </div>
+ <table class="table" *ngIf="orderproduct!=undefined">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Order Id</th>
+      <th scope="col">Order Date</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Order Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <th scope="row">{{orderproduct.orderId}}</th>
+      <td>{{orderproduct.orderDate}}</td>
+      <td>{{orderproduct.customer.customerPhone}}</td>
+      <td>{{orderproduct.totalCost | currency:'INR'}}</td>
+      <td>{{orderproduct.orderStatus}}</td>
+    </tr>
+  </tbody>
+</table>

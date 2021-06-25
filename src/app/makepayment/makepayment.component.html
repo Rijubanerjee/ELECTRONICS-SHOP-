@@ -1,0 +1,29 @@
+<section class="col-4 bg-primary mx-auto card card-primary p-1 m-1" id="makepayment">
+  <div class="alert alert-sucess text-white" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
+  <form #frm="ngForm" (ngSubmit)="makepayment()">
+    
+    <div>Card Holder Name</div>
+    <div><input type="text" class="form-control" name="txtname" [(ngModel)]="payment.cardholder" #cname="ngModel" required pattern="^[A-Za-z\s]{1,}[A-za-z\s]{0,}$"/></div>
+    <div *ngIf="cname.invalid && cname.touched" class="alert alert-danger">
+      <div *ngIf="cname.errors.required">Customer Name is Invalid</div>
+      <div *ngIf="cname.errors.pattern">Customer Name must contain alphabet and can have space in between</div>
+    </div>
+
+    <div>Enter the CVV Number</div>
+    <div><input type="number" class="form-control" name="txtcvv" [(ngModel)]="payment.cvv" #cvv="ngModel" required/></div>
+    <div *ngIf="cvv.invalid && cvv.touched" class="alert alert-danger">CVV is Mandatory</div>
+
+    <div>Date of Expiry</div>
+    <div><input type="date" class="form-control" name="txtdoe" [(ngModel)]="payment.exprdate" #edate="ngModel" required/></div>
+    <div *ngIf="edate.invalid && edate.touched" class="alert alert-danger">Expiry Date is required</div>
+
+    <div>Card Number</div>
+    <div><input type="number" class="form-control" name="txtcardno" [(ngModel)]="payment.cardno" #cno="ngModel" required/></div>
+    <div *ngIf="cno.invalid && cno.touched" class="alert alert-danger">Card Number is Mandatory</div>
+
+    <div>Order ID</div>
+    <div><input type="number" class="form-control" name="txtorderno" [(ngModel)]="payment.orderId" #orderid="ngModel" required readonly/></div>
+
+    <input type="submit" value="Make secure Payment" [disabled]="!frm.valid"/>
+  </form>
+</section>
