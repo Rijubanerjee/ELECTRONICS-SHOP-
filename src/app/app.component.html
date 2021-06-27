@@ -13,13 +13,24 @@
 </article> -->
 <header class="col-8 mx-auto bg-light">
   <h1 class="text-center">Electronics Shop</h1>
+  
 </header>
-
-
+<div>
+  <div class="col-10 text-end" *ngIf="storageservice.loginflag">
+    <span class="text-info"><h4>{{storageservice.username|titlecase}}</h4></span>
+  </div>
+</div>
 <section class="col-8 mx-auto">
 <ul class="nav nav-pills bg-primary text-white">
   <li class="nav-item">
-    <a class="nav-link text text-white" >Home</a>
+      <div>
+        <div class="col-10 text-end" *ngIf="!storageservice.loginflag">
+          <a routerLink="/login" style="cursor:pointer" class="nav-link text text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+        </div>
+        <div class="col-10 text-end" *ngIf="storageservice.loginflag">
+          <a (click)="doLogout()" class="btn-link" style="cursor:pointer" class="nav-link dropdown-toggle text text-white">Logout</a>
+        </div>
+      </div>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle text text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
@@ -70,6 +81,7 @@
     </div>
 
   </li>
+  
 
 
 </ul>

@@ -5,7 +5,9 @@ import { AdditemsinbasketComponent } from './additemsinbasket/additemsinbasket.c
 import { AddproductsComponent } from './addproducts/addproducts.component';
 import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component.spec';
 import { CancelorderComponent } from './cancelorder/cancelorder.component';
+import { CgGuard } from './cg.guard';
 import { CreateorderComponent } from './createorder/createorder.component';
+import { LoginComponent } from './login/login.component';
 import { MakepaymentComponent } from './makepayment/makepayment.component';
 import { ViewallcategoryComponent } from './viewallcategory/viewallcategory.component';
 import { ViewbycustidComponent } from './viewbycustid/viewbycustid.component';
@@ -17,7 +19,7 @@ import { ViewproductsbyproductIdComponent } from './viewproductsbyproduct-id/vie
 import { ViewproductspecsbyproductidComponent } from './viewproductspecsbyproductid/viewproductspecsbyproductid.component';
 import { ViewproductspecsbyspecidComponent } from './viewproductspecsbyspecid/viewproductspecsbyspecid.component';
 
-const routes: Routes = [{path:'vieworders/bycustid/makepayment/:orderid',component:MakepaymentComponent},
+const routes: Routes = [{path:'vieworders/bycustid/makepayment/:orderid',component:MakepaymentComponent,canActivate:[CgGuard]},
                         {path:'viewpayment',component:ViewpaymentComponent},
                         {path:'viewpaymentbycustid',component:ViewbycustidComponent},
                         {path:"vieworders",
@@ -32,13 +34,14 @@ const routes: Routes = [{path:'vieworders/bycustid/makepayment/:orderid',compone
                                    {path:"getitemsbycustid", component:ViewitemsbycustComponent},
                                    {path:'viewbycategoryname',component:ViewproductsbycategorynameComponent},
                                    {path:'viewbyproductId',component:ViewproductsbyproductIdComponent},
-                                   {path:'getitemsbycustid/createorder/:custid',component:CreateorderComponent},
+                                   {path:'getitemsbycustid/createorder/:custid',component:CreateorderComponent,canActivate:[CgGuard]},
                                    {path:"getitemsbycustid", component:ViewitemsbycustComponent},
-                                    {path:'getitemsbycustid/createorder/:custid',component:CreateorderComponent},
-                                    {path:"vieworders/bycustid/removeorder/:orderid",component:CancelorderComponent},
+                                    {path:'getitemsbycustid/createorder/:custid',component:CreateorderComponent,canActivate:[CgGuard]},
+                                    {path:"vieworders/bycustid/removeorder/:orderid",component:CancelorderComponent,canActivate:[CgGuard]},
                                     {path:'viewall/viewall/viewbycategoryname/:catName/viewbycategoryname/viewproductspecsbyproductid/:prodId',component:ViewproductspecsbyproductidComponent},
                                     {path:'viewproductspecsbyspecid',component:ViewproductspecsbyspecidComponent},                      
                                     { path:'addproductspecs',component:AddproductspecsComponent},
+                                    {path:'login',component:LoginComponent}
 ];
 
 @NgModule({

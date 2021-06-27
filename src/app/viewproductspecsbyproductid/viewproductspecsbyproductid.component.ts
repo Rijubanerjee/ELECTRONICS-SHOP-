@@ -43,6 +43,7 @@ export class ViewproductspecsbyproductidComponent implements OnInit {
       {
         console.log(error);
         this.msg=error.error.message;
+        console.log(this.msg);
         this.specs=undefined;
       }
     )

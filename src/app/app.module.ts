@@ -21,6 +21,7 @@ import { ViewproductsbyproductIdComponent } from './viewproductsbyproduct-id/vie
 import { ViewproductspecsbyproductidComponent } from './viewproductspecsbyproductid/viewproductspecsbyproductid.component';
 import { ViewproductspecsbyspecidComponent } from './viewproductspecsbyspecid/viewproductspecsbyspecid.component';
 import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component.spec';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AddproductspecsComponent } from './addproductspecs/addproductspecs.comp
     ViewproductsbyproductIdComponent,
     AddproductspecsComponent,
     ViewproductspecsbyproductidComponent,
-    ViewproductspecsbyspecidComponent
+    ViewproductspecsbyspecidComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
