@@ -1,11 +1,20 @@
-@media only screen and (max-width:600px){
+/* @media only screen and (max-width:600px){
     table{
-        width: 80%;
+        width: 100%;
     }
     th{
-        display: none;
+        display: inline-block;
     }
     td{
-        display: block;
+        display: inline-block;
     }
+} */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
 }

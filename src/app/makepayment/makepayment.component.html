@@ -1,4 +1,4 @@
-<section class="col-4 bg-primary mx-auto card card-primary p-1 m-1" id="makepayment">
+<section class="col-4  mx-auto  p-1 m-1" id="Make Payment">
   <div class="alert alert-sucess text-white" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
   <form #frm="ngForm" (ngSubmit)="makepayment()">
     
@@ -10,7 +10,7 @@
     </div>
 
     <div>Enter the CVV Number</div>
-    <div><input type="number" class="form-control" name="txtcvv" [(ngModel)]="payment.cvv" #cvv="ngModel" required/></div>
+    <div><input type="password" class="form-control" name="txtcvv" [(ngModel)]="payment.cvv" #cvv="ngModel" required/></div>
     <div *ngIf="cvv.invalid && cvv.touched" class="alert alert-danger">CVV is Mandatory</div>
 
     <div>Date of Expiry</div>
@@ -23,7 +23,9 @@
 
     <div>Order ID</div>
     <div><input type="number" class="form-control" name="txtorderno" [(ngModel)]="payment.orderId" #orderid="ngModel" required readonly/></div>
-
-    <input type="submit" value="Make secure Payment" [disabled]="!frm.valid"/>
+    <div>Make Secure Payment</div>
+    <div>
+    <input type="submit" value="Pay" class="form-control btn btn-success" style="float: center;" [disabled]="!frm.valid"/>
+  </div>
   </form>
 </section>

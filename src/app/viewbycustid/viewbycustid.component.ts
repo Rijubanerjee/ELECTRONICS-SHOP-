@@ -15,13 +15,10 @@ export class ViewbycustidComponent implements OnInit {
   constructor(public service:PaymentserviceService) { }
 
   ngOnInit() {
+    this.viewbycustid();
   }
   viewbycustid():void{
-    if(this.custid==undefined || this.custid==null || this.custid<=0)
-    {
-      this.msg="enter the employee id greater than 0";
-      return ;
-    }
+    this.custid=parseInt(localStorage.getItem("userId"));
     this.service.viewpaymentbycustid(this.custid).subscribe(data=>{
       console.log(data);
       this.payment=data;
