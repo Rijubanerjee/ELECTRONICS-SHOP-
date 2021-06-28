@@ -19,6 +19,7 @@ export class ViewproductsbycategorynameComponent implements OnInit {
       //this.prods.catName= parseInt(params.get("categoryName"));
       this.prods.name= (params.get("catName"));
     });
+    this.viewbycatName();
   }
 
   viewbycatName():void {

@@ -15,12 +15,10 @@ export class VieworderbycustidComponent implements OnInit {
   constructor(private orderproductservice:OrderproductService) { }
 
   ngOnInit() {
+    this.viewOrdersById();
   }
   viewOrdersById():void{
-    if(this.custid==null || this.custid==undefined || this.custid<=0){
-      this.msg="Enter Proper Customer Id"
-
-    }
+    this.custid=parseInt(localStorage.getItem("userId"));
     this.orderproductservice.viewOrdersById(this.custid).subscribe(data=>{
       console.log(data);
       this.orderproducts=data;
