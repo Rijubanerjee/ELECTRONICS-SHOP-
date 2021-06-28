@@ -22,7 +22,7 @@ export class AdditemsinbasketComponent implements OnInit {
 
 
   constructor(public basketservice:BasketService , public route: ActivatedRoute) {
-    
+    this.basket.custId=parseInt(localStorage.getItem("userId"));
    }
 
   ngOnInit() {
@@ -33,6 +33,7 @@ export class AdditemsinbasketComponent implements OnInit {
   }
 
   additemsinbasket():void{
+    
     this.basketservice.additems(this.basket).subscribe((data)=>{console.log("data",data);
                                                                this.msg="Product successfully added";
                                                                this.errorMsg=undefined;this.errors=undefined;

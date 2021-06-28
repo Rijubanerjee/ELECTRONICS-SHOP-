@@ -19,14 +19,16 @@ export class ViewitemsbycustComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getById();
   }
 
   getById():void{
-    if(this.cid==undefined || this.cid==null || this.cid<=0)
-    {
-      this.msg="enter valid employee id";
-      return ;
-    }
+    // if(this.cid==undefined || this.cid==null || this.cid<=0)
+    // {
+    //   this.msg="enter valid employee id";
+    //   return ;
+    // }
+    this.cid=parseInt(localStorage.getItem("userId"));
     this.basketservice.viewitemsbycust(this.cid).subscribe(data=>{console.log(data);this.items=data; 
       this.msg=undefined; this.getTotalCost();},
       error=>{console.log(error);this.msg=error.error.message;this.items=undefined});
