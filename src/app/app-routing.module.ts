@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AdditemsinbasketComponent } from './additemsinbasket/additemsinbasket.component';
 import { AddproductsComponent } from './addproducts/addproducts.component';
-import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component.spec';
+import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component';
+
 import { CancelorderComponent } from './cancelorder/cancelorder.component';
 import { CgGuard } from './cg.guard';
 import { CreateorderComponent } from './createorder/createorder.component';
@@ -41,7 +42,8 @@ const routes: Routes = [{path:'vieworders/bycustid/makepayment/:orderid',compone
                                     {path:'viewall/viewall/viewbycategoryname/:catName/viewbycategoryname/viewproductspecsbyproductid/:prodId',component:ViewproductspecsbyproductidComponent},
                                     {path:'viewproductspecsbyspecid',component:ViewproductspecsbyspecidComponent},                      
                                     { path:'addproductspecs',component:AddproductspecsComponent},
-                                    {path:'login',component:LoginComponent}
+                                    {path:'login',component:LoginComponent},
+                                    {path:"",redirectTo:"viewall",pathMatch:"full"}
 ];
 
 @NgModule({

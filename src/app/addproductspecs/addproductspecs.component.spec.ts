@@ -1,42 +1,25 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { ProductService } from '../product.service';
-import { SpecDto } from '../spec-dto';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-addproductspecs',
-  templateUrl: './addproductspecs.component.html',
-  styleUrls: ['./addproductspecs.component.css']
-})
-export class AddproductspecsComponent implements OnInit {
+import { AddproductspecsComponent } from './addproductspecs.component';
 
-  specs:SpecDto=new SpecDto();
-  msg:string;
-  @ViewChild("specform")
-  form:NgForm;
-  msgflag:boolean;
-  constructor(public productservice:ProductService) { }
+describe('AddproductspecsComponent', () => {
+  let component: AddproductspecsComponent;
+  let fixture: ComponentFixture<AddproductspecsComponent>;
 
-  ngOnInit() {
-  }
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ AddproductspecsComponent ]
+    })
+    .compileComponents();
+  }));
 
-  addspecs():void
-  {
-    this.productservice.addproductspecs(this.specs).subscribe
-    (
-      data=>
-      {
-        console.log(data);
-        this.msg=data.message;
-        this.form.reset();
-        this.msgflag=true;
-      },
-      error=>
-      {
-        console.log(error);
-        this.msg=error.error.messages;
-        this.msgflag=false;
-      }
-    )
-  }
-}
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AddproductspecsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

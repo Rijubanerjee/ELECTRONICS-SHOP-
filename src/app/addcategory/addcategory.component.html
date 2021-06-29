@@ -17,7 +17,7 @@
 <input type="submit" (click)="addcat()" class="form-control btn btn-success col-3" style="float: right;" value="Submit">
 
 </section> -->
-<section class="col-6  mx-auto p-2 m-2">
+<section class="col-6  mx-auto p-2 m-2" id="catid">
   <div class="alert alert-success text-white" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
   <form #catform="ngForm" (ngSubmit)="addcat()">
     

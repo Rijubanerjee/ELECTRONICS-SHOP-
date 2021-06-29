@@ -20,8 +20,9 @@ import { ViewproductsbycategorynameComponent } from './viewproductsbycategorynam
 import { ViewproductsbyproductIdComponent } from './viewproductsbyproduct-id/viewproductsbyproduct-id.component';
 import { ViewproductspecsbyproductidComponent } from './viewproductspecsbyproductid/viewproductspecsbyproductid.component';
 import { ViewproductspecsbyspecidComponent } from './viewproductspecsbyspecid/viewproductspecsbyspecid.component';
-import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component.spec';
+
 import { LoginComponent } from './login/login.component';
+import { AddproductspecsComponent } from './addproductspecs/addproductspecs.component';
 
 @NgModule({
   declarations: [

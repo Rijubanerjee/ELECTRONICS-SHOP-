@@ -1,23 +1,25 @@
-<section class="col-4 bg-primary card card-primary mx-auto p-1 m-1" id="addspecs">
+<br>
+<section class="col-5 mx-auto" id="addspecs">
+  <br>
   <h2>Add Product Specifications</h2>
-  <div class="alert alert-success text-white" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
-  <form #specform="ngForm" (ngSubmit)="addspecs()">
+  <div class="alert alert-success text-white col-6" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
+  <form #specform="ngForm" (ngSubmit)="addspecs()" class="mx-auto">
     
     <div>Specification Name</div>
-    <div><input type="text" [(ngModel)]="specs.specName" name="txtname" #ename="ngModel" required pattern="^[A-Za-z\s]{1,}[A-za-z\s]{0,}$"></div>
+    <div><input class="col-5" type="text" [(ngModel)]="specs.specName" name="txtname" #ename="ngModel" required pattern="^[A-Za-z\s]{1,}[A-za-z\s]{0,}$"></div>
     <div *ngIf="ename.invalid&&ename.touched" class="alert alert-danger">
       <div *ngIf="ename.errors.required">Specification Name is required</div>
       <div *ngIf="ename.errors.pattern">Specification Name must contain alphabet and can have space in between</div>
     </div>
     
     <div>Specification Value</div>
-    <div><input type="text" [(ngModel)]="specs.specValue" name="txtval" #eval="ngModel" required></div>
+    <div><input class="col-5" type="text" [(ngModel)]="specs.specValue" name="txtval" #eval="ngModel" required></div>
     <div *ngIf="eval.invalid&&eval.touched" class="alert alert-danger">Specification Value is required</div>
-
-    <div>Product Id</div>
-    <div><input type="number" [(ngModel)]="specs.productId" name="txtpid" #epid="ngModel" required></div>
-    <div *ngIf="epid.invalid&&epid.touched" class="alert alert-danger">Product Id is required</div>
     
-    <input type="submit" value="Add Product Specifications" [disabled]="!specform.valid">
+    <div>Product Id</div>
+    <div><input class="col-5" type="number" [(ngModel)]="specs.productId" name="txtpid" #epid="ngModel" required></div>
+    <div *ngIf="epid.invalid&&epid.touched" class="alert alert-danger">Product Id is required</div>
+    <br>
+    <input type="submit" value="Add Product Specifications" class="form-control btn btn-success col-5" style="float: center;" [disabled]="!specform.valid">
   </form>
 </section>
