@@ -15,7 +15,7 @@
     <div>Specification Value</div>
     <div><input class="col-5" type="text" [(ngModel)]="specs.specValue" name="txtval" #eval="ngModel" required></div>
     <div *ngIf="eval.invalid&&eval.touched" class="alert alert-danger">Specification Value is required</div>
-    
+
     <div>Product Id</div>
     <div><input class="col-5" type="number" [(ngModel)]="specs.productId" name="txtpid" #epid="ngModel" required></div>
     <div *ngIf="epid.invalid&&epid.touched" class="alert alert-danger">Product Id is required</div>
