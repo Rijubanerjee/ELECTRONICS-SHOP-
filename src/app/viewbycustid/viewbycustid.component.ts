@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Banktransaction } from '../banktransaction';
 import { PaymentserviceService } from '../paymentservice.service';
 
+//  @author Wriju Banerjee
+//  @Version : 1.0
+//  @Description : This Component Class to see payment details of an user
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-viewbycustid',
   templateUrl: './viewbycustid.component.html',

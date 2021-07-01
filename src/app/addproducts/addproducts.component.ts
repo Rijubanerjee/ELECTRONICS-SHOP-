@@ -3,6 +3,11 @@ import { NgForm } from '@angular/forms';
 import { ProductService } from '../product.service';
 import { Productdto } from '../productdto';
 
+//  @author Alangkrita Chakrabarti 
+//  @Version : 1.0
+//  @Description : This Component Class adds products to specific category
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-addproducts',
   templateUrl: './addproducts.component.html',

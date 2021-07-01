@@ -5,6 +5,11 @@ import { BasketDto } from '../basket-dto';
 import { BasketService } from '../basket.service';
 import { Customer } from '../customer';
 
+//  @author Sukanya Biswas  
+//  @Version : 1.0
+//  @Description : This Component Class adds Items to the basket
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-additemsinbasket',
   templateUrl: './additemsinbasket.component.html',

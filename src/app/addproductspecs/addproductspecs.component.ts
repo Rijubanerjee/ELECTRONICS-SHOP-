@@ -3,6 +3,11 @@ import { NgForm } from '@angular/forms';
 import { ProductService } from '../product.service';
 import { SpecDto } from '../spec-dto';
 
+//  @author Souhardya Ray
+//  @Version : 1.0
+//  @Description : This Component Class adds product specifications
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-addproductspecs',
   templateUrl: './addproductspecs.component.html',

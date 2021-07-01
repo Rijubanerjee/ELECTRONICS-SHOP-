@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 
+//  @author Alangkrita Chakrabarti 
+//  @Version : 1.0
+//  @Description : This Component Class views all category 
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-viewallcategory',
   templateUrl: './viewallcategory.component.html',

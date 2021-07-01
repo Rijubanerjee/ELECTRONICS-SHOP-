@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 
+//  @author Alangkrita Chakrabarty
+//  @Version : 1.0
+//  @Description : This Component Class views products by product id
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-viewproductsbyproduct-id',
   templateUrl: './viewproductsbyproduct-id.component.html',

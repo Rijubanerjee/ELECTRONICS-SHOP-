@@ -3,6 +3,10 @@ import { NgForm } from '@angular/forms';
 import { Category } from '../category';
 import { ProductService } from '../product.service';
 
+//  @author Alangkrita Chakrabarti 
+//  @Version : 1.0
+//  @Description : This Component Class adds category
+//  @Date: 25/6/2021
 @Component({
   selector: 'app-addcategory',
   templateUrl: './addcategory.component.html',

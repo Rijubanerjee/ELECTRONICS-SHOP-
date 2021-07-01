@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderproductService } from '../orderproduct.service';
 
+//  @author Atanu Chowdhury
+//  @Version : 1.0
+//  @Description : This Component Class views items in the order of an user
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-vieworderbycustid',
   templateUrl: './vieworderbycustid.component.html',

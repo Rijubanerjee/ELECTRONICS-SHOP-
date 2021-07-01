@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Basket } from '../basket';
 import { BasketService } from '../basket.service';
 
+//  @author Sukanya Biswas
+//  @Version : 1.0
+//  @Description : This Component Class views items in the basket of an user
+//  @Date: 25/6/2021
 
 @Component({
   selector: 'app-viewitemsbycust',

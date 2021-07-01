@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OrderproductService } from '../orderproduct.service';
 
+//  @author Atanu Chowdhury
+//  @Version : 1.0
+//  @Description : This Component Class create orders
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-createorder',
   templateUrl: './createorder.component.html',

@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 
+//  @author Souhardya Ray 
+//  @Version : 1.0
+//  @Description : This Component Class views product specification by specification ID
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-viewproductspecsbyspecid',
   templateUrl: './viewproductspecsbyspecid.component.html',

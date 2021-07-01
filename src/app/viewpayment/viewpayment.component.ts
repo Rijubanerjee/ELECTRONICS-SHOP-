@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentserviceService } from '../paymentservice.service';
 
+//  @author Wriju Banerjee
+//  @Version : 1.0
+//  @Description : This Component Class views payment of a perticular transaction ID
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-viewpayment',
   templateUrl: './viewpayment.component.html',

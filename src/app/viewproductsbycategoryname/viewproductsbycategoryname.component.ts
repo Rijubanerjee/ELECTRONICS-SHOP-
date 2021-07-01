@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 
+//  @author Alangkrita Chakrabarty
+//  @Version : 1.0
+//  @Description : This Component Class views products by category name
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-viewproductsbycategoryname',
   templateUrl: './viewproductsbycategoryname.component.html',

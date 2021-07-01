@@ -3,6 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { OrderproductService } from '../orderproduct.service';
 import { Orderproducts } from '../orderproducts';
 
+//  @author Atanu Chowdhury  
+//  @Version : 1.0
+//  @Description : This Component Class cancels order
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-cancelorder',
   templateUrl: './cancelorder.component.html',

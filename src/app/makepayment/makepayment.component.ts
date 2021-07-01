@@ -4,6 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Paymentdto } from '../paymentdto';
 import { PaymentserviceService } from '../paymentservice.service';
 
+//  @author Wriju Banerjee 
+//  @Version : 1.0
+//  @Description : This Component Class makes payment 
+//  @Date: 25/6/2021
+
 @Component({
   selector: 'app-makepayment',
   templateUrl: './makepayment.component.html',

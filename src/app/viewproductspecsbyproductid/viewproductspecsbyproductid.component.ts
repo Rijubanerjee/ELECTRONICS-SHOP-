@@ -3,6 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product.service';
 import { SpecDto } from '../spec-dto';
 
+//  @author Souhardya Ray
+//  @Version : 1.0
+//  @Description : This Component Class views product specifications by product id
+//  @Date: 25/6/2021
+
+
 @Component({
   selector: 'app-viewproductspecsbyproductid',
   templateUrl: './viewproductspecsbyproductid.component.html',
